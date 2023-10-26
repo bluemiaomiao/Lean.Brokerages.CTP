@@ -23,10 +23,10 @@ using QuantConnect.Securities;
 using QuantConnect.Data.Market;
 using QuantConnect.Lean.Engine.HistoricalData;
 
-namespace QuantConnect.TemplateBrokerage.Tests
+namespace QuantConnect.CTP.Tests
 {
     [TestFixture, Ignore("Not implemented")]
-    public class TemplateBrokerageHistoryProviderTests
+    public class CTPHistoryProviderTests
     {
         private static TestCaseData[] TestParameters
         {
@@ -51,13 +51,13 @@ namespace QuantConnect.TemplateBrokerage.Tests
         {
             TestDelegate test = () =>
             {
-                var brokerage = new TemplateBrokerage(null);
+                var brokerage = new CTP(null);
 
                 var historyProvider = new BrokerageHistoryProvider();
                 historyProvider.SetBrokerage(brokerage);
                 historyProvider.Initialize(new HistoryProviderInitializeParameters(null, null, null,
                     null, null, null, null,
-                    false, null));
+                    false, null, null));
 
                 var marketHoursDatabase = MarketHoursDatabase.FromDataFolder();
                 var now = DateTime.UtcNow;

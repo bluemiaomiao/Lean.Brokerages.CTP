@@ -20,10 +20,10 @@ using QuantConnect.Tests;
 using QuantConnect.Logging;
 using QuantConnect.Data.Market;
 
-namespace QuantConnect.TemplateBrokerage.Tests
+namespace QuantConnect.CTP.Tests
 {
     [TestFixture]
-    public partial class TemplateBrokerageTests
+    public partial class CTPTests
     {
         private static TestCaseData[] TestParameters
         {
@@ -43,7 +43,7 @@ namespace QuantConnect.TemplateBrokerage.Tests
         public void StreamsData(Symbol symbol, Resolution resolution, bool throwsException)
         {
             var cancelationToken = new CancellationTokenSource();
-            var brokerage = (TemplateBrokerage)Brokerage;
+            var brokerage = (CTP)Brokerage;
 
             SubscriptionDataConfig[] configs;
             if (resolution == Resolution.Tick)

@@ -9,11 +9,14 @@
         <Copyright>Copyright ©  2021</Copyright>
         <TestProjectType>UnitTest</TestProjectType>
         <OutputPath>bin\$(Configuration)\</OutputPath>
-        <Product>QuantConnect.TemplateBrokerage.Tests</Product>
-        <AssemblyName>QuantConnect.TemplateBrokerage.Tests</AssemblyName>
-        <RootNamespace>QuantConnect.TemplateBrokerage.Tests</RootNamespace>
+        <Product>QuantConnect.CTP.Tests</Product>
+        <AssemblyName>QuantConnect.CTP.Tests</AssemblyName>
+        <RootNamespace>QuantConnect.CTP.Tests</RootNamespace>
         <AssemblyTitle>QuantConnect.TemplateBrokerage.Tests</AssemblyTitle>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <PackageId>QuantConnect.CTP.Tests</PackageId>
+        <Authors>QuantConnect.CTP.Tests</Authors>
+        <Company>QuantConnect.CTP.Tests</Company>
     </PropertyGroup>
 
     <ItemGroup>
@@ -28,8 +31,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\Lean\Tests\QuantConnect.Tests.csproj" />
-      <ProjectReference Include="..\QuantConnect.TemplateBrokerage.ToolBox\QuantConnect.TemplateBrokerage.ToolBox.csproj" />
-      <ProjectReference Include="..\QuantConnect.TemplateBrokerage\QuantConnect.TemplateBrokerage.csproj" />
+      <ProjectReference Include="..\QuantConnect.CTP.ToolBox\QuantConnect.CTP.ToolBox.csproj" />
+      <ProjectReference Include="..\QuantConnect.CTP\QuantConnect.CTP.csproj" />
     </ItemGroup>
 
     <ItemGroup>

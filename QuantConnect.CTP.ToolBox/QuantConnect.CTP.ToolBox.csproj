@@ -7,14 +7,17 @@
         <TargetFramework>net6.0</TargetFramework>
         <Copyright>Copyright ©  2021</Copyright>
         <OutputPath>bin\$(Configuration)\</OutputPath>
-        <Product>QuantConnect.TemplateBrokerage.ToolBox</Product>
-        <AssemblyName>QuantConnect.TemplateBrokerage.ToolBox</AssemblyName>
-        <RootNamespace>QuantConnect.TemplateBrokerage.ToolBox</RootNamespace>
+        <Product>QuantConnect.CTP.ToolBox</Product>
+        <AssemblyName>QuantConnect.CTP.ToolBox</AssemblyName>
+        <RootNamespace>QuantConnect.CTP.ToolBox</RootNamespace>
         <AssemblyTitle>QuantConnect.TemplateBrokerage.ToolBox</AssemblyTitle>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
         <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
         <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-        <Description>QuantConnect LEAN Template Brokerage: Brokerage Template toolbox plugin for Lean</Description>
+        <Description></Description>
+        <PackageId>QuantConnect.CTP.ToolBox</PackageId>
+        <Authors>QuantConnect.CTP.ToolBox</Authors>
+        <Company>QuantConnect.CTP.ToolBox</Company>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <DebugType>full</DebugType>

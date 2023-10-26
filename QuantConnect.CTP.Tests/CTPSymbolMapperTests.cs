@@ -14,19 +14,22 @@
 */
 
 using NUnit.Framework;
-using QuantConnect.Interfaces;
-using QuantConnect.Util;
 
-namespace QuantConnect.TemplateBrokerage.Tests
+namespace QuantConnect.CTP.Tests
 {
-    [TestFixture, Ignore("This test requires a configured TemplateBrokerageFactory")]
-    public class TemplateBrokerageFactoryTests
+    [TestFixture, Ignore("Not implemented")]
+    public class CTPSymbolMapperTests
     {
         [Test]
-        public void InitializesFactoryFromComposer()
+        public void ReturnsCorrectLeanSymbol()
         {
-            using var factory = Composer.Instance.Single<IBrokerageFactory>(instance => instance.BrokerageType == typeof(TemplateBrokerage));
-            Assert.IsNotNull(factory);
+
+        }
+
+        [Test]
+        public void ReturnsCorrectBrokerageSymbol()
+        {
+
         }
     }
 }

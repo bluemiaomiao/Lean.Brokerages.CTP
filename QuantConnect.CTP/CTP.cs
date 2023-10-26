@@ -24,10 +24,10 @@ using QuantConnect.Securities;
 using QuantConnect.Brokerages;
 using System.Collections.Generic;
 
-namespace QuantConnect.TemplateBrokerage
+namespace QuantConnect.CTP
 {
-    [BrokerageFactory(typeof(TemplateBrokerageFactory))]
-    public class TemplateBrokerage : Brokerage, IDataQueueHandler, IDataQueueUniverseProvider
+    [BrokerageFactory(typeof(CTPFactory))]
+    public class CTP : Brokerage, IDataQueueHandler, IDataQueueUniverseProvider
     {
         private readonly IDataAggregator _aggregator;
         private readonly EventBasedDataQueueHandlerSubscriptionManager _subscriptionManager;
@@ -41,7 +41,7 @@ namespace QuantConnect.TemplateBrokerage
         /// Parameterless constructor for brokerage
         /// </summary>
         /// <remarks>This parameterless constructor is required for brokerages implementing <see cref="IDataQueueHandler"/></remarks>
-        public TemplateBrokerage()
+        public CTP()
             : this(Composer.Instance.GetPart<IDataAggregator>())
         {
         }
@@ -50,7 +50,7 @@ namespace QuantConnect.TemplateBrokerage
          /// Creates a new instance
          /// </summary>
         /// <param name="aggregator">consolidate ticks</param>
-        public TemplateBrokerage(IDataAggregator aggregator) : base("TemplateBrokerage")
+        public CTP(IDataAggregator aggregator) : base("CTP")
         {
             _aggregator = aggregator;
             _subscriptionManager = new EventBasedDataQueueHandlerSubscriptionManager();

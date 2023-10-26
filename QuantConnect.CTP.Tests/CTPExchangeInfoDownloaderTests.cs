@@ -19,15 +19,15 @@ using QuantConnect.Util;
 using System;
 using System.Linq;
 
-namespace QuantConnect.TemplateBrokerage.Tests
+namespace QuantConnect.CTP.Tests
 {
-    [TestFixture, Ignore("This test requires a configured TemplateExchangeInfoDownloader")]
-    public class TemplateExchangeInfoDownloaderTests
+    [TestFixture, Ignore("This test requires a configured CTPExchangeInfoDownloader")]
+    public class CTPExchangeInfoDownloaderTests
     {
         [Test]
         public void GetsExchangeInfo()
         {
-            var eid = Composer.Instance.GetExportedValueByTypeName<IExchangeInfoDownloader>("TemplateExchangeInfoDownloader");
+            var eid = Composer.Instance.GetExportedValueByTypeName<IExchangeInfoDownloader>("CTPExchangeInfoDownloader");
             var tickers = eid.Get().ToList();
 
             Assert.IsTrue(tickers.Any());

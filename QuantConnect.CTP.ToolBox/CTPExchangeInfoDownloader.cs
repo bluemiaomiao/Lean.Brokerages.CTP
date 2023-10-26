@@ -13,20 +13,28 @@
  * limitations under the License.
 */
 
-using NUnit.Framework;
-using QuantConnect.Util;
-using QuantConnect.Interfaces;
+using QuantConnect.ToolBox;
+using System.Collections.Generic;
 
-namespace QuantConnect.TemplateBrokerage.Tests
+namespace QuantConnect.CTP.ToolBox
 {
-    [TestFixture]
-    public class TemplateBrokerageAdditionalTests
+    /// <summary>
+    /// Template Brokerage implementation of <see cref="IExchangeInfoDownloader"/>
+    /// </summary>
+    public class CTPExchangeInfoDownloader : IExchangeInfoDownloader
     {
-        [Test]
-        public void ParameterlessConstructorComposerUsage()
+        /// <summary>
+        /// Market
+        /// </summary>
+        public string Market => throw new System.NotImplementedException();
+
+        /// <summary>
+        /// Get exchange info coma-separated data
+        /// </summary>
+        /// <returns>Enumerable of exchange info for this market</returns>
+        public IEnumerable<string> Get()
         {
-            var brokerage = Composer.Instance.GetExportedValueByTypeName<IDataQueueHandler>("TemplateBrokerage");
-            Assert.IsNotNull(brokerage);
+            throw new System.NotImplementedException();
         }
     }
 }
